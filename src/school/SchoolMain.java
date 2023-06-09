@@ -57,12 +57,13 @@ public class SchoolMain extends Database {
 
         Statement stmt = getStatement();
 
-        String query = "insert into school values" +
-                "('" + id + "'," +
+        String query = "insert into school " +
+                "values(" +
+                "'" + id + "'," +
                 "'" + name + "'," +
                 "'" + school + "'," +
                 "'" + birthday + "'," +
-                "upper('" + gender + "')";
+                "upper('" + gender + "'))";
 
         int result = stmt.executeUpdate(query);
         if(result == 1) System.out.println("데이터 추가 성공");
