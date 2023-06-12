@@ -1,8 +1,7 @@
-> drop table score;
-> 
-> drop table school;
+drop table score;
+drop table school;
 
-> create table school(
+create table school(
 studentid varchar2(100) primary key,
 studentname varchar2(100),
 schoolname varchar2(100),
@@ -10,8 +9,7 @@ birthday date,
 gender char(1),
 constraint gender_ch check(gender in('M', 'F'))
 );
-> 
-> create table score(
+create table score(
 studentid varchar2(100),
 grade number,
 class number,
@@ -22,27 +20,25 @@ eng number,
 constraint studentid_fk foreign key (studentid) references school(studentid) on delete cascade
 );
 
->insert into school(studentid,studentname,schoolname,birthday,gender)
+insert into school(studentid,studentname,schoolname,birthday,gender)
 values('Hong','홍길동','하이미디어고등학교','2004-02-01','M');
-> 
->insert into school(studentid,studentname,schoolname,birthday,gender)
+insert into school(studentid,studentname,schoolname,birthday,gender)
 values('Kim','김민재','하이미디어고등학교','2004-11-01','M');
-> 
->insert into school(studentid,studentname,schoolname,birthday,gender)
+insert into school(studentid,studentname,schoolname,birthday,gender)
 values('Yoon','윤아름','하이미디어고등학교','2004-12-31','F');
->insert into school(studentid,studentname,schoolname,birthday,gender)
+insert into school(studentid,studentname,schoolname,birthday,gender)
 values('Park','박은탁','하이미디어고등학교','2004-07-05','M');
->insert into school(studentid,studentname,schoolname,birthday,gender)
+insert into school(studentid,studentname,schoolname,birthday,gender)
 values('Lee','이성경','하이미디어고등학교','2004-08-10','F');
->insert into school(studentid,studentname,schoolname,birthday,gender)
+insert into school(studentid,studentname,schoolname,birthday,gender)
 values('Ahn','안효섭','하이미디어고등학교','2004-04-17','M');
->insert into school(studentid,studentname,schoolname,birthday,gender)
+insert into school(studentid,studentname,schoolname,birthday,gender)
 values('Cha','차은재','하이미디어고등학교','2004-06-12','F');
->insert into school(studentid,studentname,schoolname,birthday,gender)
+insert into school(studentid,studentname,schoolname,birthday,gender)
 values('Seo','서우진','하이미디어고등학교','2004-11-26','M');
->insert into school(studentid,studentname,schoolname,birthday,gender)
+insert into school(studentid,studentname,schoolname,birthday,gender)
 values('Kang','강동주','하이미디어고등학교','2004-06-27','M');
->insert into school(studentid,studentname,schoolname,birthday,gender)
+insert into school(studentid,studentname,schoolname,birthday,gender)
 values('Yoo','유연석','하이미디어고등학교','2004-04-11','M');
 
 insert into score(studentid, grade, class, semester, kor, math, eng)
